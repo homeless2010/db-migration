@@ -1,0 +1,11 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="dh_project_category.loadData" author="homeless">
+        <loadData tableName="dh_project_category" file="db/csv/dh_project_category.csv">
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

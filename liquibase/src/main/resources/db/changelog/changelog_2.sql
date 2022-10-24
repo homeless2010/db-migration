@@ -14,3 +14,5 @@ CREATE TABLE `user` (
 --changeset zhouyi:2
 insert into user(id, name, age) values(1,'张三',29);
 insert into user(id, name, age) values(2,'李四',20);
+
+--rollback delete from user;

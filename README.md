@@ -14,8 +14,10 @@
 ## liquibase
 
 - 社区版支持回滚、以及diff数据库操作，社区回滚即按照版本顺序一次回滚直至指定版本，而商业版可定向回滚
+    > [自动回滚支持](https://docs.liquibase.com/workflows/liquibase-community/liquibase-auto-rollback.html),对于不支持自动回滚的操作支持自定义回滚
 - 集成引入jar即可
-- 支持xml、json、yaml配置方式迁移，需按照既定的schema来编写，同时也支持在配置文件中直接引入sql脚本
+- 支持xml、json、yaml、sql配置方式迁移，需按照既定的schema来编写，同时也支持在配置文件中直接引入sql脚本
+    >[generatechangelog](https://docs.liquibase.com/tools-integrations/maven/commands/maven-generatechangelog.html)可生成初始化xml、sql等文件
 - 支持maven插件执行迁移、反向生成迁移xml文件、校验、diff等命令
 
 ## 对比

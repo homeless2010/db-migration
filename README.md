@@ -19,11 +19,12 @@
 - 支持maven插件执行迁移、反向生成迁移xml文件、校验、diff等命令
 
 ## 对比
-
-1. flyway相比liquibase简单易用,只需按命名规则将sql文件放置指定目录([默认加载目录](db/migration))即可， 
-   而liquibase则需编写相应的描述文件如[xml](db/changelog/changelog_1.xml)
-2. flyway社区版不支持回滚   
+1. flyway与liquibase都支持常见数据库如mysql系、Oracle、SQLLite、DB2、SQL Server等([liquibase支持列表](https://docs.liquibase.com/install/tutorials/home.html))([flyway支持列表](https://documentation.red-gate.com/fd))
+2. flyway相比liquibase简单易用,只需按命名规则将sql文件放置指定目录([默认加载目录](flyway/src/main/resources/db/migration))即可， 
+   而liquibase则需编写相应的描述文件如[xml](liquibase/src/main/resources/db/changelog/changelog_1.xml)，不过通过编写xml liquibase可以跨库使用，flyway跨库则需按照方言改写sql
+3. flyway社区版不支持回滚   
    [flyway各个版本及功能](https://www.red-gate.com/products/flyway/editions)   
    liquibase社区版支持[回滚](https://www.liquibase.com/blog/targeted-rollback)但回滚为按相反顺序依次回滚，定向回滚则需要专业版   
    ![liquibase-rollback](doc/img/liquibase-rollback.png)
-3. flyway社区版不支持diff，liquibase社区版支持diff可以比较两个数据库差异
+4. flyway社区版不支持diff，liquibase社区版支持diff可以比较两个数据库差异
+5. flyway社区版仅支持高版本数据库，如[MySql](https://flywaydb.org/documentation/database/mysql)需8.0低版本则需团队版才支持

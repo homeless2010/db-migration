@@ -20,10 +20,8 @@
 
 ## 对比
 
-1. flyway相比liquibase简单易用,只需按命名规则将sql文件放置指定目录即可，
-   ![flyway](doc/img/flyway-sql-file-location.png)   
-   而liquibase则需编写相应的描述文件   
-   ![liquibase](doc/img/liquibase-changelog.png)
+1. flyway相比liquibase简单易用,只需按命名规则将sql文件放置指定目录([默认加载目录](db/migration))即可， 
+   而liquibase则需编写相应的描述文件如[xml](db/changelog/changelog_1.xml)
 2. flyway社区版不支持回滚   
    [flyway各个版本及功能](https://www.red-gate.com/products/flyway/editions)   
    liquibase社区版支持[回滚](https://www.liquibase.com/blog/targeted-rollback)但回滚为按相反顺序依次回滚，定向回滚则需要专业版   

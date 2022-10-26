@@ -1,0 +1,1 @@
+mvn resources:resources liquibase:generateChangeLog -D liquibase.outputChangeLogFile=step_iot_dev6.mysql.sql -D liquibase.includeSchema=true -D liquibase.changeSetAuthor=cjcui

@@ -1,0 +1,16 @@
+-- liquibase formatted sql
+
+-- changeset 82431:1666601869739-1
+CREATE TABLE dh_project_category (id VARCHAR(64) NOT NULL, name VARCHAR(255) NULL COMMENT '类目类型名称', status INT NULL COMMENT '状态。1正常，2删除', remark VARCHAR(255) NULL COMMENT '备注', bbb VARCHAR(255) NULL, address VARCHAR(255) NULL, CONSTRAINT PK_DH_PROJECT_CATEGORY PRIMARY KEY (id)) COMMENT='项目类型表';
+ALTER TABLE dh_project_category COMMENT = '项目类型表';
+ALTER TABLE dh_project_category MODIFY COLUMN id VARCHAR(64) COMMENT '项目类型id';
+ALTER TABLE dh_project_category MODIFY COLUMN name VARCHAR(255) COMMENT '类目类型名称';
+ALTER TABLE dh_project_category MODIFY COLUMN status INT COMMENT '状态。1正常，2删除';
+ALTER TABLE dh_project_category MODIFY COLUMN remark VARCHAR(255) COMMENT '备注';
+
+-- changeset 82431:1666601869739-2
+CREATE TABLE test (id BIGINT NULL, name CHAR(1) NULL);
+
+-- changeset 82431:1666601869739-3
+CREATE TABLE user (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(50) NOT NULL, age INT NOT NULL, CONSTRAINT PK_USER PRIMARY KEY (id));
+
